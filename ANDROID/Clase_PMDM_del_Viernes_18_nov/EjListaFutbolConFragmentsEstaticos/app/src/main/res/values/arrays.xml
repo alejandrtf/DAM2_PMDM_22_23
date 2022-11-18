@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="escudo_equipo">
+        <item>@drawable/barcelona</item>
+        <item>@drawable/madrid</item>
+        <item>@drawable/atletico_madrid</item>
+        <item>@drawable/valencia</item>
+        <item>@drawable/sevilla</item>
+        <item>@drawable/malaga</item>
+        <item>@drawable/celta</item>
+        <item>@drawable/villarreal</item>
+        <item>@drawable/athetic</item>
+        <item>@drawable/getafe</item>
+        <item>@drawable/rayo_vallecano</item>
+        <item>@drawable/eibar</item>
+        <item>@drawable/levante</item>
+        <item>@drawable/espanyol</item>
+        <item>@drawable/granada</item>
+        <item>@drawable/real_sociedad</item>
+        <item>@drawable/almeria</item>
+        <item>@drawable/deportivo</item>
+        <item>@drawable/elche</item>
+        <item>@drawable/cordoba</item>
+    </array>
+
+    <string-array name="nombre_equipo">
+        <item>Barcelona</item>
+        <item>Real Madrid</item>
+        <item>Atlético Madrid</item>
+        <item>Valencia</item>
+        <item>Sevilla</item>
+        <item>Málaga</item>
+        <item>Celta</item>
+        <item>Villa Real</item>
+        <item>Athletic</item>
+        <item>Getafe</item>
+        <item>Rayo Vallecano</item>
+        <item>Eibar</item>
+        <item>Levante</item>
+        <item>Espanyol</item>
+        <item>Granada</item>
+        <item>Real Sociedad</item>
+        <item>Almeria</item>
+        <item>Deportivo</item>
+        <item>Elche</item>
+        <item>Córdoba</item>
+    </string-array>
+
+    <integer-array name="puntos_equipo">
+        <item>33</item>
+        <item>28</item>
+        <item>26</item>
+        <item>24</item>
+        <item>23</item>
+        <item>21</item>
+        <item>20</item>
+        <item>18</item>
+        <item>15</item>
+        <item>14</item>
+        <item>14</item>
+        <item>13</item>
+        <item>12</item>
+        <item>11</item>
+        <item>11</item>
+        <item>10</item>
+        <item>10</item>
+        <item>10</item>
+        <item>10</item>
+        <item>7</item>
+    </integer-array>
+</resources>
