@@ -1,0 +1,139 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="446dp"
+
+        tools:context=".MainActivity" >
+
+        <EditText
+            android:id="@+id/editTextURL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/button2"
+            android:ems="10"
+            android:inputType="textUri"
+            android:text="http://www.google.com" >
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/editTextURL"
+            android:onClick="abrirURL"
+            android:text="Abrir URL" />
+
+        <EditText
+            android:id="@+id/editTextTel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/imageView1"
+            android:layout_below="@+id/button1"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:inputType="phone" />
+
+        <Button
+            android:id="@+id/buttonLlamar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/editTextTel"
+            android:layout_alignRight="@+id/button1"
+            android:onClick="llamar"
+            android:text="Llamar" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/buttonFoto"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_launcher_foreground" />
+
+        <Button
+            android:id="@+id/buttonMarcar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/buttonLlamar"
+            android:layout_below="@+id/buttonLlamar"
+            android:onClick="marcar"
+            android:text="Marcar" />
+
+        <Button
+            android:id="@+id/buttonFoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buttonMarcar"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="60dp"
+            android:layout_toRightOf="@+id/imageView1"
+            android:onClick="foto"
+            android:text="Foto" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/buttonFoto"
+            android:layout_alignBottom="@+id/buttonFoto"
+            android:layout_alignLeft="@+id/buttonMarcar"
+            android:onClick="email"
+            android:text="email" />
+
+        <Button
+            android:id="@+id/buttonMaps"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/imageView1"
+            android:layout_below="@+id/imageView1"
+            android:layout_marginTop="40dp"
+            android:onClick="maps"
+            android:text="Maps" />
+
+        <Button
+            android:id="@+id/buttonStreet"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/buttonMaps"
+            android:layout_below="@+id/buttonMaps"
+            android:layout_marginTop="16dp"
+            android:onClick="street"
+            android:text="Street" />
+
+        <EditText
+            android:id="@+id/editTextLong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/buttonMaps"
+            android:layout_alignBottom="@+id/buttonMaps"
+            android:layout_alignRight="@+id/button2"
+            android:layout_toRightOf="@+id/buttonFoto"
+            android:ems="10"
+            android:inputType="numberDecimal|numberSigned" />
+
+        <EditText
+            android:id="@+id/editTextLat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/buttonStreet"
+            android:layout_alignBottom="@+id/buttonStreet"
+            android:layout_alignLeft="@+id/editTextLong"
+            android:layout_alignRight="@+id/editTextLong"
+            android:ems="10"
+            android:inputType="numberDecimal|numberSigned" />
+
+    </RelativeLayout>
+</ScrollView>
