@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">EjemploAsyncTask</string>
+    <string name="cargar_imagen">CARGAR IMAGEN</string>
+    <string name="otra_tarea">OTRA TAREA</string>
+    <string name="url">https://cdn.pixabay.com/photo/2017/10/18/16/08/wolves-2864647_960_720.jpg</string>
+</resources>
