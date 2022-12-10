@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">EjemploServiciosNotificacionesReceptoresAnuncios</string>
+    <string name="url">https://firebasestorage.googleapis.com/v0/b/ejemplousoserviciosandroid.appspot.com/o/notas.csv?alt=media&amp;token=91473f61-67f5-4a62-b71c-131f3138f78e</string>
+</resources>
