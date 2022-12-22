@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Ej_ManejoCheckBox_RadioButton</string>
+    <string name="label_titulo">Opciones del fondo</string>
+    <string name="cb_fondo_rojo">Fondo Rojo</string>
+    <string name="cb_transparente">Transparente</string>
+    <string name="cb_activity_verde">Activity Verde</string>
+    <string name="rb_centrado">centrado sin estirar</string>
+    <string name="rb_estirado">estirado</string>
+</resources>
