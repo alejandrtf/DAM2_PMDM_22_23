@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/labelIncremento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Incremento"
+        app:layout_constraintBottom_toBottomOf="@+id/etIncremento"
+        app:layout_constraintEnd_toStartOf="@+id/etIncremento"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etIncremento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/labelPorcentaje"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/labelIncremento"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/labelPorcentaje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="%"
+        app:layout_constraintBottom_toBottomOf="@+id/etIncremento"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/etIncremento"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btFragmentA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Fragment A"
+        app:layout_constraintEnd_toStartOf="@+id/btFragmentB"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etIncremento" />
+
+    <Button
+        android:id="@+id/btFragmentB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Fragment B"
+        app:layout_constraintEnd_toStartOf="@+id/btFragmentC"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btFragmentA"
+        app:layout_constraintTop_toBottomOf="@+id/etIncremento" />
+
+    <Button
+        android:id="@+id/btFragmentC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="Fragment C "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btFragmentB"
+        app:layout_constraintTop_toBottomOf="@+id/etIncremento"
+        app:layout_wrapBehaviorInParent="horizontal_only" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/frPrincipal"
+        android:name="es.alejandra.android.ejerrepasofragmentsestticos.PrincipalFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btFragmentA"
+        tools:layout="@layout/fragment_principal" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/frSuma"
+        android:name="es.alejandra.android.ejerrepasofragmentsestticos.SumaFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/frResta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/frPrincipal"
+        app:layout_constraintTop_toBottomOf="@+id/btFragmentB"
+        tools:layout="@layout/fragment_suma" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/frResta"
+        android:name="es.alejandra.android.ejerrepasofragmentsestticos.RestaFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/frPrincipal"
+        app:layout_constraintTop_toBottomOf="@+id/frSuma"
+        tools:layout="@layout/fragment_resta" />
+</androidx.constraintlayout.widget.ConstraintLayout>
