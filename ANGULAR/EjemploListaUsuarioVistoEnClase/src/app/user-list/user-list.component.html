@@ -1,0 +1,17 @@
+<p >{{ titulo }}</p>
+<ul>
+  <li *ngFor="let usu of usuarios">
+   <app-user-item [usuario]="usu"></app-user-item>
+  </li>
+</ul>
+<hr />
+
+
+<div *ngIf="usuarioMayoresEdad.length>0">
+  <h2>Listado de usuario mayores de edad</h2>
+  <ul>
+    <li *ngFor="let u of usuarioMayoresEdad">
+     <app-user-item [usuario]="u"></app-user-item>
+    </li>
+  </ul>
+</div>
