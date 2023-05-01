@@ -1,0 +1,169 @@
+<div class="container-fluid">
+  <div class="row mb-2">
+    <div class="col-3">
+      <label for="nombre" class="col-form-label col-3">Nombre</label>
+    </div>
+    <div class="col-9">
+      <input
+        type="text"
+        id="nombre"
+        class="form-control"
+        aria-labelledby="nombreUsuario"
+        #nombreUsuario
+        (change)="onNombreCambiado(nombreUsuario.value)"
+      />
+    </div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-3">
+      <label for="ciudad" class="col-form-label col-3">Ciudad</label>
+    </div>
+    <div class="col-9">
+      <input
+        type="text"
+        id="ciudad"
+        class="form-control"
+        aria-labelledby="ciudadUsuario"
+        (change)="onCiudadCambiada($event)"
+      />
+    </div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-3">
+      <label for="empleo" class="col-form-label col-3">Empleo</label>
+    </div>
+    <div class="col-9">
+      <input
+        type="text"
+        id="empleo"
+        class="form-control"
+        aria-labelledby="empleoUsuario"
+        [(ngModel)]="empleo"
+      />
+    </div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-3">
+      <label for="edad" class="col-form-label col-3">Edad</label>
+    </div>
+    <div class="col-5">
+      <input
+        type="number"
+        id="edad"
+        class="form-control"
+        aria-labelledby="edadUsuario"
+        #edadUsuario
+        (input)="onEdadCambiada(edadUsuario.value)"
+      />
+    </div>
+    <div class="form-check col-2">
+      <input
+        class="form-check-input"
+        type="radio"
+        name="estudiaTrabaja"
+        id="opcionEstudia"
+        checked
+        value="Estudia"
+        #opcionEstudia
+        (change)="onInputRadioElegido(opcionEstudia.value)"
+      />
+      <label class="form-check-label" for="opcionEstudia"> Estudia </label>
+    </div>
+    <div class="form-check col-2">
+      <input
+        class="form-check-input"
+        type="radio"
+        name="estudiaTrabaja"
+        id="opcionTrabaja"
+        value="Trabaja"
+        #opcionTrabaja
+        (change)="onInputRadioElegido(opcionTrabaja.value)"
+      />
+      <label class="form-check-label" for="opcionTrabaja"> Trabaja </label>
+    </div>
+  </div>
+
+  
+
+
+  <div class="mx-auto">
+    <button type="button" class="btn btn-primary" (click)="onClickadoEnviar()">
+      Enviar
+    </button>
+  </div>
+
+  <hr />
+  <h2>RESULTADOS OBTENIDOS:</h2>
+  <div class="row mb-2">
+    <div class="col-6" [style.background-color]="'#FAEFC2'">
+      <p class="text-start">El nombre que se ha introducido ha sido:</p>
+      <p class="text-start">
+        <i
+          >Recogido con una <strong>'template variable'</strong> y el evento
+          <strong>(change)</strong></i
+        >
+      </p>
+    </div>
+    <div class="col-6 d-flex align-items-center justify-content-center border border-secondary">
+      <p id="nombre">{{nombreUsuario.value}}</p> <!--Estoy mostrando el valor del input-->
+    </div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-6" [style.background-color]="'#F8CF63'">
+      <p class="text-start">La Ciudad introducida ha sido:</p>
+      <p class="text-start">
+        <i
+          >Recogido con <strong>$event</strong> y el evento
+          <strong>(change)</strong></i
+        >
+      </p>
+    </div>
+    <div class="col-6 d-flex align-items-center justify-content-center border border-secondary">
+      <p id="ciudad">{{ciudad}}</p>
+    </div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-6" [style.background-color]="'#F8CF63'">
+      <p class="text-start">El empleo introducido ha sido:</p>
+      <p class="text-start">
+        <i
+          >Recogido con <strong>[(ngModel)]</strong></i>
+      </p>
+    </div>
+    <div class="col-6 d-flex align-items-center justify-content-center border border-secondary">
+      <p id="empleo">{{empleo}}</p>
+    </div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-6" [style.background-color]="'#FAEFC2'">
+      <p class="text-start">La edad introducida ha sido:</p>
+      <p class="text-start">
+        <i
+          >Recogido con una <strong>'template variable'</strong> y el evento
+          <strong>(input)</strong></i
+        >
+      </p>
+    </div>
+    <div class="col-6 d-flex align-items-center justify-content-center border border-secondary">
+      <p id="edadUsuario"> </p>
+    </div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-6" [style.background-color]="'#F8CF63'">
+        <p class="text-start">¿Trabaja o estudia esta persona? RESPUESTA:</p>
+      <p class="text-start">
+        <i
+          >Recogido con una <strong>'template variable'</strong> y el evento <strong>(change)</strong> </i>
+      </p>
+    </div>
+    <div class="col-6 d-flex align-items-center justify-content-center border border-secondary">
+      <p id="estudiaTrabaja">{{isEstudiando?"Estudia":"Trabaja"}}</p>
+    </div>
+  </div>
+  <h3> Al pulsar el botón ENVIAR se mostrará una alerta con todos los datos seleccionados en el formulario</h3>
+
+ </div>
